@@ -1,0 +1,79 @@
+#menustate {
+    display: none;
+}
+.menuicon {
+    list-style: none;
+}
+@media screen and (max-width: 1024px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #globalnav .menuicon-bread-crust {
+        display: block;
+        width: 30px;
+        height: 1px;
+        background: #494964;
+        position: absolute;
+        left: .5px;
+        z-index: 1;
+    }
+    .menuicon {
+        order: 1;
+        list-style: none;
+    }
+    .menuicon-bread {
+        justify-content: flex-start;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        box-sizing: content-box;
+        cursor: pointer;
+    }
+    #menustate {
+        display: none;
+    }
+    .menuicon-bread-top {
+        transition: transform .1806s cubic-bezier(0.04, 0.04, 0.12, 0.96),
+        -webkit-transform .1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+        transform: none;
+    }
+    .menuicon-bread-crust-top {
+        top: 14px;
+        transform: translateY(-5px);
+        transition: transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s,
+        -webkit-transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s;
+    }
+    .menuicon-bread-bottom {
+        transition: transform .1806s cubic-bezier(0.04, 0.04, 0.12, 0.96),
+        -webkit-transform .1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+        transform: none;
+    }
+    .menuicon-bread-crust-bottom {
+        bottom: 14px;
+        transform: translateY(5px);
+        transition: transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s,
+        -webkit-transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s;
+    }
+    #menustate:checked ~ #globalnav .menuicon-bread-top {
+        transition: transform .3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) .1008s,
+        -webkit-transform .3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) .1008s;
+        transform: rotate(45deg);
+    }
+    #menustate:checked ~ #globalnav .menuicon-bread-crust-top {
+        transition: transform .1806s cubic-bezier(0.04, 0.04, 0.12, 0.96),
+        -webkit-transform .1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+        transform: none;
+    }
+    #menustate:checked ~ #globalnav .menuicon-bread-bottom {
+        transition: transform .3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) .1008s,
+        -webkit-transform .3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) .1008s;
+        transform: rotate(-45deg);
+    }
+    #menustate:checked ~ #globalnav .menuicon-bread-crust-bottom {
+        transition: transform .1806s cubic-bezier(0.04, 0.04, 0.12, 0.96),
+        -webkit-transform .1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+        transform: none;
+    }
+}
